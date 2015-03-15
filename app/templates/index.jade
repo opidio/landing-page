@@ -1,0 +1,50 @@
+extends ./includes/base.jade
+include ./includes/mixins.jade
+
+block title
+    title Opidio
+
+block content
+    section#more-details
+        .feature
+            h3 Feature 1
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tristique magna.
+        .feature
+            h3 Feature 2
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tristique magna.
+        .feature
+            h3 Feature 3
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tristique magna.
+        .feature
+            h3 Feature 4
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec tristique magna.
+    section#beta
+        h2 Beta Signup
+        p Fill in this form and you will be contacted when there is something available for testing
+        form(method='post')#beta-signup
+            +formTextField('first_name', 'First Name')
+            +formTextField('last_name', 'Last Name')
+            +formTextField('email', 'Email')
+            +formTextField('country', 'Country')
+            +formTextField('city', 'City')
+            .formfield
+                label(for='referer') Where did you hear about Opidio?
+                    select(name='referer')#referer
+                        option(value='') Select one
+                        option(value='A Friend') A friend
+                        option(value='Google+') Google +
+                        option(value='Facebook') Facebook)
+                        option(value='Twitter') Twitter)
+                        option(value='Search Engine') Search Engine
+                        option(value='Other') Other ...
+                    input(type='text', name='other_referer', placeholder='Other...')#other_referer
+            .formfield
+                input(type='submit', value='Sign up')
+    section#more-info
+        h2 More Info
+        p
+            | Want to know more about me who's creating this project? Read more at the
+            a(href='/about-me') about me
+            | page.
+
+    script(src='app.js')

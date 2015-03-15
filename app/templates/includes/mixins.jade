@@ -1,0 +1,4 @@
+mixin formTextField(code, display)
+    .formfield
+        label(for=code)= display + ':'
+        input(type='text', name=code, placeholder=display, id=code)
