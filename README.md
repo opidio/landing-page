@@ -15,19 +15,19 @@ that's built using the provided `Dockerfile`.
 
 ## Installing `docker` and `docker-compose`
 If you just want to build and run the project without enjoying some development features such
-as automatically rebuilding the project on file change and live reload in the browser the only
+as automatically rebuilding and automatically reloading the browser, the only
 thing you need to install is the main `docker` binary.
 
 ### Install `docker`
-Most linux distros has prebuilt binaries. Using arch or debian for example:
-```
+Most Linux distros has prebuilt binaries. Using arch or debian for example:
+```bash
 pacman -S docker # Arch
 sudo apt-get update && sudo apt-get install docker.io # Debian
 ```
-for complete instructions for all methods see [docs.docker.com/installation](https://docs.docker.com/installation/).
+for complete instructions see [docs.docker.com/installation](https://docs.docker.com/installation/).
 
 ### Install `docker-compose`
-Compose can be either installad as a python package or simple as a downloaded binary. See
+Compose can be either installad as a python package or as a simple downloaded binary. See
 [docs.docker.com/compose/install](http://docs.docker.com/compose/install/) for complete instructions.
 
 ## Running & Building the Opidio Landing Page
@@ -36,14 +36,14 @@ or development mode.
 
 ### Production
 You can choose to build the docker image yourself, in which case you should run:
-```
+```bash
 docker build -t landing-page .
 ```
 Which will save your image as `landing-page`. There's a pre-built image that can instead be downloaded
 called ([opidio/landing-page](https://registry.hub.docker.com/u/opidio/landing-page/)).
 
 To run the image you can use:
-```
+```bash
 docker run -d -p 8080:80 landing-page # Run your selfbuilt image
 docker run -d -p 8080:80 opidio/landing-page # Automatically download the latest image from Docker Hub before running it
 ```
@@ -56,7 +56,7 @@ choosen by docker. In that case, you can use `docker ps` to see which port it is
 ### Development
 Running using Compose will use the `docker-compose.yml` file which in turn will use the `dev` bash script to start
 the `nginx` server and automatically rebuild the project when any changes occur using `gulp`.
-```
+```bash
 docker-compose build && docker-compose up
 ```
 `docker-compose` will start the server on port `8080` by default, though it can be changed in `docker-compose.yml`.
