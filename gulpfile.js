@@ -44,7 +44,7 @@ gulp.task('watch', function() {
 	gulp.start('default');
 	livereload.listen();
 	gulp.watch('./app/styl/*', ['styles']);
-	gulp.watch('./app/templates/*', ['templates'])
+	gulp.watch('./app/templates/*', ['templates']);
 });
 
 gulp.task('default', ['styles', 'templates']);
