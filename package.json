@@ -19,10 +19,11 @@
   "dependencies": {
     "gulp": "^3.8.11",
     "gulp-jade": "^1.0.0",
-    "gulp-sourcemaps": "^1.5.0",
-    "gulp-stylus": "^2.0.1",
     "gulp-livereload": "^3.8.0",
     "gulp-plumber": "^1.0.0",
-    "gulp-util": "^3.0.4"
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-stylus": "^2.0.1",
+    "gulp-util": "^3.0.4",
+    "marked": "^0.3.3"
   }
 }
