@@ -22,7 +22,6 @@ RUN npm install
 COPY . .
 RUN ./node_modules/gulp/bin/gulp.js
 
-
 CMD ["nginx"]
 
 EXPOSE 80

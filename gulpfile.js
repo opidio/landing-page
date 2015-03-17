@@ -4,8 +4,7 @@ var gulp = require('gulp'),
 	stylus = require('gulp-stylus'),
 	jade = require('gulp-jade'),
 	sourcemaps = require('gulp-sourcemaps'),
-	watch = require('gulp-watch'),
-	batch = require('gulp-batch');
+	livereload = require('gulp-livereload');
 
 gulp.task('styles', function() {
 	gulp.src('./app/styl/app.styl')
@@ -14,25 +13,22 @@ gulp.task('styles', function() {
 			compress: true
 		}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./out/static/'));
+		.pipe(gulp.dest('./out/static/'))
+		.pipe(livereload());
 });
 
 gulp.task('templates', function() {
 	gulp.src('./app/templates/*.jade')
 		.pipe(jade())
-		.pipe(gulp.dest('./out/'));
+		.pipe(gulp.dest('./out/'))
+		.pipe(livereload());
 });
 
 gulp.task('watch', function() {
 	gulp.start('default');
-
-	watch('./app/styl/*', batch(function() {
-		gulp.start('styles');
-	}));
-
-	watch('./app/templates/*', batch(function() {
-		gulp.start('templates');
-	}));
+	livereload.listen();
+	gulp.watch('./app/styl/*', ['styles']);
+	gulp.watch('./app/templates/*', ['templates'])
 });
 
 gulp.task('default', ['styles', 'templates']);
