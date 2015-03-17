@@ -6,13 +6,13 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y \
 	curl && \
 	curl -sL https://deb.nodesource.com/setup_iojs_1.x | bash -
-	
+
 
 RUN apt-get update && apt-get install -y \
 	iojs \
 	nginx
 
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/
 
 RUN mkdir /landing-page
 WORKDIR /landing-page

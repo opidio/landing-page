@@ -14,7 +14,7 @@ gulp.task('styles', function() {
 			compress: true
 		}))
 		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('./out/'));
+		.pipe(gulp.dest('./out/static/'));
 });
 
 gulp.task('templates', function() {
