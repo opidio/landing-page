@@ -16,14 +16,22 @@
     "url": "https://github.com/opidio/landing-page/issues"
   },
   "homepage": "https://github.com/opidio/landing-page",
-  "dependencies": {
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
     "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-concat": "^2.5.2",
     "gulp-jade": "^1.0.0",
     "gulp-livereload": "^3.8.0",
     "gulp-plumber": "^1.0.0",
-    "gulp-sourcemaps": "^1.5.0",
+    "gulp-sourcemaps": "^1.5.1",
     "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.4",
-    "marked": "^0.3.3"
+    "marked": "^0.3.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
   }
 }
