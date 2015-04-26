@@ -1,4 +1,14 @@
 # Opidio Landing Page
+[![Build Status](https://img.shields.io/circleci/project/opidio/landing-page.svg?style=flat-square)](https://circleci.com/gh/opidio/landing-page)
+[![Code Coverage](https://img.shields.io/coveralls/opidio/landing-page.svg?style=flat-square)](https://coveralls.io/r/opidio/landing-page)
+
+The Opidio Projects:
+
+[![Hub Server](https://img.shields.io/badge/opidio-hub--server-lightgray.svg?style=flat-square)](https://github.com/opidio/hub-server)
+[![Channel Server](https://img.shields.io/badge/opidio-channel--server-lightgray.svg?style=flat-square)](https://github.com/opidio/channel-server)
+[![Android Client](https://img.shields.io/badge/opidio-android--client-lightgray.svg?style=flat-square)](https://github.com/opidio/android-client)
+[![Landing Page](https://img.shields.io/badge/opidio-landing--page-blue.svg?style=flat-square)](https://github.com/opidio/landing-page)
+
 The landing page frontend. Availiable as a prebuilt docker image at Docker Hub
 ([opidio/landing-page](https://registry.hub.docker.com/u/opidio/landing-page/))
 and hosted at [get.opid.io](http://get.opid.io).
